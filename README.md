@@ -1,8 +1,15 @@
-# hello-world
-this is a test repostitory
 
-hi world
+## 20190613:
+    This repository name has been changed from 'hello-world' to 'Gadget-Collection'
 
-This is my first time to use github. i'm a new hands. 
+------------------------------------------------------------------------------------------------------------------------------------------
+## 20180302:
+    # hello-world
+    this is a test repostitory
 
-everything is fresh ----- update on 20180302
+    hi world
+
+    This is my first time to use github. i'm a new hands. 
+
+    everything is fresh ----- update on 20180302
+------------------------------------------------------------------------------------------------------------------------------------------

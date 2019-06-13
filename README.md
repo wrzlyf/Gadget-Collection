@@ -1,16 +1,22 @@
 
+
+------------------------------------------------------------------------------------------------------------------------------------------
 ##3 20190613:
-    #1 This repository name has been changed from 'hello-world' to 'Gadget-Collection'
-    #2 Add new Tool 'auto download douban photo.py'
+
+    1 This repository name has been changed from 'hello-world' to 'Gadget-Collection'    
+    2 Add new Tool 'auto download douban photo.py'
+    
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ##2 20190525:
-    #1 Add new Tool '自动更新 pip list.py'
+
+    1 Add new Tool '自动更新 pip list.py'
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ##1 20180302:
-    # hello-world
+    
+    hello-world
     this is a test repostitory
 
     hi world

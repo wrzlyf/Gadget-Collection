@@ -34,50 +34,85 @@ def Get_Dictionary_PackageList():
 
     Get_Dictionary_PackageList={}
     ## PACKAGELIST START ##
-
     Get_Dictionary_PackageList={
+    "-illow": "6.0.0",
+    "-ymupdf": "1.14.16",
     "asn1crypto": "0.24.0",
     "astroid": "2.2.5",
-    "cachetools": "3.1.0",
-    "certifi": "2019.3.9",
+    "atomicwrites": "1.3.0",
+    "attrs": "19.1.0",
+    "cachetools": "3.1.1",
+    "certifi": "2019.6.16",
     "cffi": "1.12.3",
     "chardet": "3.0.4",
+    "Click": "7.0",
     "colorama": "0.4.1",
-    "cryptography": "2.6.1",
-    "Django": "2.2.1",
-    "earthengine-api": "0.1.175",
+    "cryptography": "2.7",
+    "dbapi": "0.0.14",
+    "Django": "2.2.4",
+    "earthengine-api": "0.1.186",
     "et-xmlfile": "1.0.1",
-    "google-api-python-client": "1.7.8",
+    "Flask": "1.1.1",
+    "google-api-python-client": "1.7.10",
     "google-auth": "1.6.3",
     "google-auth-httplib2": "0.0.3",
-    "httplib2": "0.12.3",
+    "httplib2": "0.13.1",
     "idna": "2.8",
-    "isort": "4.3.20",
+    "importlib-metadata": "0.19",
+    "isort": "4.3.21",
+    "itsdangerous": "1.1.0",
     "jdcal": "1.4.1",
+    "Jinja2": "2.10.1",
     "lazy-object-proxy": "1.4.1",
+    "lxml": "4.4.0",
+    "MarkupSafe": "1.1.1",
     "mccabe": "0.6.1",
-    "numpy": "1.16.3",
+    "more-itertools": "7.2.0",
+    "numpy": "1.17.0",
     "oauth2client": "4.1.3",
     "openpyxl": "2.6.2",
-    "pandas": "0.24.2",
-    "pip": "19.1.1",
-    "pyasn1": "0.4.5",
-    "pyasn1-modules": "0.2.5",
+    "packaging": "19.1",
+    "pandas": "0.25.0",
+    "pdfminer3": "2018.12.3.0",
+    "pdfminer3k": "1.3.1",
+    "phoenix": "0.9.1",
+    "Pillow": "6.1.0",
+    "pip": "19.2.1",
+    "pipenv": "2018.11.26",
+    "pluggy": "0.12.0",
+    "ply": "3.11",
+    "py": "1.8.0",
+    "pyasn1": "0.4.6",
+    "pyasn1-modules": "0.2.6",
     "pycparser": "2.19",
+    "pycryptodome": "3.8.2",
     "pylint": "2.3.1",
+    "PyMuPDF": "1.14.19",
     "pyOpenSSL": "19.0.0",
+    "pyparsing": "2.4.2",
+    "PyPDF2": "1.26.0",
+    "pytest": "5.0.1",
     "python-dateutil": "2.8.0",
-    "pytz": "2019.1",
+    "pytz": "2019.2",
+    "reportlab": "3.5.23",
     "requests": "2.22.0",
     "rsa": "4.0",
+    "scipy": "1.3.0",
     "setuptools": "41.0.1",
     "six": "1.12.0",
+    "sortedcontainers": "2.1.0",
     "sqlparse": "0.3.0",
-    "typed-ast": "1.3.5",
+    "typed-ast": "1.4.0",
     "uritemplate": "3.0.0",
-    "urllib3": "1.25.2",
-    "wrapt": "1.11.1"
-}   
+    "urllib3": "1.25.3",
+    "virtualenv": "16.6.0",
+    "virtualenv-clone": "0.5.3",
+    "wcwidth": "0.1.7",
+    "Werkzeug": "0.15.5",
+    "wrapt": "1.11.2",
+    "wxPython": "4.0.6",
+    "zipp": "0.5.2"
+}
     ## PACKAGELIST END ##
     return Get_Dictionary_PackageList
 
@@ -171,9 +206,9 @@ def Enter_Data_into_json(dict_data):
     #  ###
 
     import json
-    import os
+    import sys
     
-    Path_json_file=os.getcwd() + ('\\test_data.json')
+    Path_json_file=sys.path[0] + ('\\test_data.json')
     json_str=json.dumps(dict_data,indent=4)
 
     with open(Path_json_file,'w') as json_file:
@@ -189,13 +224,14 @@ def Create_New_py_File(Path_json_file):
     # 输入值：字典
     # 输出值：/
     #  ###
-
+    
+    import sys
     import os
     import json
     #import pprint
 
     json_file=open(Path_json_file)
-    current_path=os.getcwd()
+    current_path=sys.path[0]
     fileList=os.walk(current_path)
     for dirPath,dirNames,fileNames in fileList:
         for fileName in fileNames:
